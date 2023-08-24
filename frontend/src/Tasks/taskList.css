@@ -1,0 +1,111 @@
+.task-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.headingAddTask {
+    margin-left: 340px;
+}
+
+.taskList {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.task-list-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.add-task-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-task-button:hover {
+    background-color: #0056b3;
+}
+
+.task {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.task-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.task-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button.update-button {
+    background-color: #ffc107;
+    color: #333;
+    margin-right: 10px;
+}
+
+.action-button:hover {
+    background-color: #c82333;
+}
+
+.action-button.update-button:hover {
+    background-color: #e0a800;
+}
+
+.task {
+    /* ... (other task styles) */
+}
+
+.completed {
+    background-color: #f0f0f0;
+    /* Change this to your desired completed task style */
+}
+
+.action-button {
+    /* ... (other button styles) */
+}
+
+.complete-button {
+    background-color: #4caf50;
+    /* Change this to your desired complete button style */
+    color: white;
+}
+
+.undo-button {
+    background-color: #ff9800;
+    /* Change this to your desired undo button style */
+    color: white;
+}
