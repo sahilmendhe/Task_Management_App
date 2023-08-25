@@ -4,12 +4,15 @@ import './loginForm.css';
 function LoginForm({ onLoginSuccess, rememberMe, setRememberMe }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loginError, setLoginError] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
         // Simulate login success
         if (email === 'user@example.com' && password === 'password') {
             onLoginSuccess();
+        } else {
+            setLoginError(true); // Set login error if credentials are incorrect
         }
     };
 
@@ -43,6 +46,8 @@ function LoginForm({ onLoginSuccess, rememberMe, setRememberMe }) {
                     />
                 </div>
                 <br />
+
+                {loginError && <p className="text-danger">Incorrect credentials. Please try again.</p>}
 
                 <button type="submit" className="btn btn-primary btn-block mb-4">
                     Sign in

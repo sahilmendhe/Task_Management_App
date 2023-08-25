@@ -10,3 +10,9 @@
 .login {
     font-size: large;
 }
+
+.text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

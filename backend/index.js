@@ -10,15 +10,19 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(bodyParser.json());
 
-const mongoURL = 'mongodb://localhost:27017/task_management';
+const password = encodeURIComponent("Pass@123");
+const uri = `mongodb+srv://SynthCyber:${password}@articles.zd85s5p.mongodb.net/Sahil?retryWrites=true&w=majority`;
+mongoose.connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
-mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('Connected to MongoDB');
-    })
-    .catch(error => {
-        console.error('Error connecting to MongoDB:', error);
-    });
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'Connection error:'));
+db.once('open', () => {
+    console.log('Connected to MongoDB Atlas');
+});
 
 app.use('/tasks', taskRoutes);
 
