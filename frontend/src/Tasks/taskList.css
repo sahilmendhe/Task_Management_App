@@ -5,7 +5,16 @@
 }
 
 .headingAddTask {
-    margin-left: 340px;
+    margin-top: 101.5px;
+    position: fixed;
+    background-color: white;
+    width: 800px;
+    height: 100px;
+}
+
+
+.addButton {
+    margin-left: 100px;
 }
 
 .taskList {
@@ -19,16 +28,21 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    margin-left: 90px;
+    margin-top: 35px;
 }
 
 .add-task-button {
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 8px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-left: 400px;
+    margin-bottom: 23px;
+
 }
 
 .add-task-button:hover {

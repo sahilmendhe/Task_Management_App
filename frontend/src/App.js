@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 import TasksList from './Tasks/tasksList';
-import LoginForm from './Auth/loginForm';
 import Navbar from './Tasks/navbar';
-
+import LoginForm from './Auth/loginForm';
+import './App.css'
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  useEffect(() => {
+    const authToken = localStorage.getItem('authToken');
+    if (authToken) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
   const handleLoginSuccess = () => {
+    localStorage.setItem('authToken', 'your-auth-token'); // Replace with your actual token
     setIsLoggedIn(true);
   };
 
   const handleSignOut = () => {
+    localStorage.removeItem('authToken');
     setIsLoggedIn(false);
   };
 
@@ -19,7 +27,7 @@ function App() {
     <div className="App">
       {isLoggedIn ? (
         <>
-          <Navbar onSignOut={handleSignOut} /> { }
+          <Navbar onSignOut={handleSignOut} />
           <TasksList />
         </>
       ) : (

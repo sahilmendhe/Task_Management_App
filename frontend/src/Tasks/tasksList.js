@@ -78,10 +78,15 @@ function TasksList() {
     return (
         <div className='taskList'>
             <div className='headingAddTask'>
-                <h1 className="task-list-heading">Task List</h1>
-                <button className="add-task-button" onClick={openCreateModal}>
-                    Add Task
-                </button>
+                <td className='taskHeading'>
+                    <h1 className="task-list-heading">Task List</h1>
+                </td>
+                <td className='addButton'>
+                    <button className="add-task-button" onClick={openCreateModal}>
+                        Add Task
+                    </button>
+                </td>
+
             </div>
 
             <div className="task-list-container">

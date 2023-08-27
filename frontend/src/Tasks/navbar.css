@@ -1,11 +1,12 @@
 /* Navbar.css */
 .navbar {
     display: flex;
-    justify-content: space-between;
     background-color: #98c5f4;
     padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 98%;
 }
+
 
 .navbar img {
     width: 100px;
@@ -21,17 +22,19 @@
 }
 
 .sign-out-button {
-    background-color: #d25555;
-    color: rgb(0, 0, 0);
+    background-color: #007bff;
+    color: rgb(255 255 255);
     border: none;
-    border-radius: 5px;
+    border-radius: 21px;
     padding: 8px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 60%;
+    margin-left: 67%;
     font-weight: 600;
+    height: 34px;
+    margin-top: 31px;
 }
 
 .sign-out-button:hover {
-    background-color: #106477;
+    background-color: #c01818;
 }
