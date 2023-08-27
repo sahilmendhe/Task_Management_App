@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'http://localhost:8080/tasks';
+const baseURL = 'https://taskmanagementappbackend.up.railway.app/tasks';
 
 const createTask = async (task) => {
     try {
