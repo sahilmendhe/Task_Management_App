@@ -6,7 +6,7 @@ import TaskForm from './taskForm'
 
 function TasksList() {
     const [tasks, setTasks] = useState([]);
-    const baseURL = 'http://localhost:8080';
+    const baseURL = 'https://taskmanagementappbackend.up.railway.app';
 
     useEffect(() => {
         fetchTasks();
